@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI 3D Model Generator</title>
+    <style>
+        body { margin: 0; background: #111; color: white; font-family: Arial; }
+        #ui {
+            position: absolute; top: 10px; left: 10px;
+            background: rgba(0,0,0,0.6); padding: 10px;
+            border-radius: 8px;
+        }
+        input, button { padding: 8px; margin: 4px; }
+    </style>
+</head>
+<body>
+
+<div id="ui">
+    <input id="userText" placeholder="Type something: tiger, castle, robot..." size="30">
+    <button id="generate">Generate</button>
+    <button id="export">Export as OBJ</button>
+</div>
+
+<canvas id="scene"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/exporters/OBJExporter.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
