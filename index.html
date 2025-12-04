@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Text → Procedural 3D Modeler (OBJ Export)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <h2>Type a word → Generate model</h2>
+    <input id="prompt" placeholder="e.g. robot, tiger, castle, dragon, spaceship" />
+    <button id="generate">Generate</button>
+    <button id="export">Export .OBJ</button>
+    <label for="detail">Detail</label>
+    <input id="detail" type="range" min="0" max="2" value="1" />
+    <small id="hint">Detail ≤ 2 (higher = heavier geometry)</small>
+  </div>
+
+  <div id="container"></div>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- OrbitControls + loaders + exporter -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/exporters/OBJExporter.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
